@@ -1,3 +1,4 @@
+//webpack.dev.js
 import { merge } from "webpack-merge";
 import common from "./webpack.config.js";
 
@@ -5,7 +6,7 @@ export default merge(common, {
   mode: "development",
   devtool: "eval-source-map",
   devServer: {
-    watchFiles: ["./src/template.html"],
+    watchFiles:["./src/template.html"],
     static: "./dist",
-  },
+  }
 });

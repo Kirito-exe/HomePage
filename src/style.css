@@ -1,5 +1,20 @@
+
+@font-face {
+    font-family:"playfair" ;
+    src: url(./assests/fonts/PlayfairDisplay-VariableFont_wght.woff2);
+}
+.about-me p{
+    font-size: 1.3rem;
+}
+.details .icons svg{
+    min-width: 2.5rem
+}
+h3{
+    font-size: 2rem;
+}
 body{
-    background-color: rgb(244, 244, 244);
+    background-color: white;
+    font-family: "playfair",Arial, Helvetica, sans-serif;
 }
 .about-me{
     display: flex;
@@ -8,33 +23,75 @@ body{
     padding: 5rem;
     min-height: 70vh;
 }
+.background{
+    height: 70vh;
+    background-color: black;
+    width: 100%;
+    transform-origin: center;
+    transform: skewY(-15deg) translateY(-15%);
+    position: absolute;
+    z-index: -1;
+}
+h2{
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
 .about-me .details{
     background-color: white;
-    padding: 2rem 1rem;
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 40vh;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
+    gap:2em;
+    transform: translateY(-10%);
 }
 .about-me img{
     max-width: 30vw;
     object-fit: cover;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
+}
+
+.about-me .details .icons{
+    display: flex;
+    align-self: flex-end;
+    gap:1rem
 }
 .projects{
     padding: 5rem;
 }
 .project-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap:5rem;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap:3rem;
 }
 .item .details .title{
     display: flex;
     margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    gap: 1rem;
+}
+.icons svg{
+    min-width: 1.75rem;
 }
 .item .details{
     padding: 2rem 1rem;
 }
+.item img{
+    border-radius: 10px;
+}
 .item{
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.477);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
 }
 footer .container img{
     max-width: 20vw;
@@ -48,11 +105,20 @@ footer{
 footer .container{
     display: flex;
     justify-content: center;
-    gap: 10rem;
 }
 footer .container .details{
-
+    margin-right: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+picture h1{
+    font-size: 5rem;
+    transform: translateY(-100%);
+    color: white;
 }
