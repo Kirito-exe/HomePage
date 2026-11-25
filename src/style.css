@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(244, 244, 244);
+}
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    min-height: 70vh;
+}
+.about-me .details{
+    background-color: white;
+    padding: 2rem 1rem;
+}
+.about-me img{
+    max-width: 30vw;
+    object-fit: cover;
+}
+.projects{
+    padding: 5rem;
+}
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:5rem;
+}
+.item .details .title{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.item .details{
+    padding: 2rem 1rem;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.477);
+}
+footer .container img{
+    max-width: 20vw;
+    object-fit: cover;
+}
+footer{
+    color: white;
+    background-color: black;
+    padding: 5rem;
+}
+footer .container{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+footer .container .details{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
