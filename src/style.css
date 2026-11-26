@@ -3,8 +3,11 @@
     font-family:"playfair" ;
     src: url(./assests/fonts/PlayfairDisplay-VariableFont_wght.woff2);
 }
+a{
+    color: black;
+}
 .about-me,.projects,footer{
-    padding: 3rem clamp(2rem,4vw,5rem);
+    padding: 3rem clamp(1rem,4vw,5rem);
 }
 .about-me p{
     font-size: clamp(0.6rem,1rem,1.5rem);
@@ -75,9 +78,9 @@ h2{
 
 .icons{
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
-.icons svg{
+.icons a svg{
     min-width: 1.75rem;
 }
 .item .details{
@@ -105,9 +108,21 @@ footer .container{
     display: flex;
     justify-content: center;
 }
+footer .container .details .icons{
+    max-height: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+footer .container .details .icons a{
+    color: white;
+}
+footer .container .details .icons a svg{
+    fill:white
+}
 footer .container .details{
     margin-right: 6rem;
     display: flex;
+    gap:1rem;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -156,14 +171,50 @@ picture h1{
         z-index: 2;
         transform: translateX(30vw) translateY(-115%);
     }
+    svg{
+        max-width: 20px;
+    }
     .about-me .details{
         display: inline;
     }
     .about-me .details .icons{
         max-height: 30px;
         justify-content: flex-end;
-        gap:0;
+        gap:1rem;
     }
 }
-@media (max-width:500px) {
+@media (max-width:600px) {
+    .about-me > picture{
+        display: flex;
+    }
+    .about-me{
+        flex-direction: column;
+    }
+    .details picture{
+        display: none;
+    }
+    footer .container{
+        flex-direction: column;
+        gap:2rem;
+        justify-content: center;
+    }
+    footer .container .details{
+        margin-right: 0;
+    }
+    footer .container .details >h2{
+        align-self: center;
+    }
+    footer .container img{
+        min-width: 100%;
+    }
+    .about-me .details{
+        box-shadow: none;
+        border: none;
+        display: flex;
+        padding: 0.8rem 1rem;
+    }
+    .about-me p{
+        min-width: auto;
+    }
+
 }
