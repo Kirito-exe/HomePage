@@ -7,7 +7,34 @@
     font-family: "Roboto";
     src: url(./assests/fonts/Roboto-VariableFont_wdth\,wght.woff2);
 }
+/* animations */
+svg{
+    will-change: transform;
+    transition: transform 0.3s ease-in-out;
+}
+svg:hover{
+    transform: scale(1.2);
+}
+.item{
+    will-change: transform;
+    will-change: filter;
+    filter: saturate(0);
+    transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out
+}
+.item:hover{
+    filter: saturate(100%);
+    transform: scale(1.1);
+}
+.item img{
+    will-change: filter;
+    filter: blur(1px);
+    transition: filter 0.2s ease-in-out
+}
+.item img:hover{
+    filter: blur(0);
+}
 
+/* end of animations */
 p{
     font-family: "Roboto",Arial, Helvetica, sans-serif;
 }
